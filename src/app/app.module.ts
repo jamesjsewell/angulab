@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FlashMessageComponent } from './components/flash-message/flash-message.component'
+import { AjaxSpinnerComponent } from './components/ajax-spinner/ajax-spinner.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    FlashMessageComponent
+    FlashMessageComponent,
+    AjaxSpinnerComponent
   ],
   imports: [
     BrowserModule,

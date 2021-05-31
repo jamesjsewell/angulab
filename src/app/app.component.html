@@ -1,5 +1,5 @@
+<ajax-spinner *ngIf="ajaxStateService.fetching"></ajax-spinner>
 <router-outlet></router-outlet>
-
 <button routerLink="/jokes">jokes</button>
 <button routerLink="/animals">Awww</button>
 <div *ngFor="let message of flashMessageService.messages$ | async">

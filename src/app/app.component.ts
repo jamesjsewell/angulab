@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FlashMessage } from './constants'
 import { FlashMessageService } from './services/flash-message.service';
+import { AjaxStateService } from './services/ajax-state.service'
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,9 @@ import { FlashMessageService } from './services/flash-message.service';
 export class AppComponent {
   title = 'my-app';
   flashMessages: FlashMessage[] = []
+  isFetching = false;
 
-  constructor(public flashMessageService: FlashMessageService){
+  constructor(public flashMessageService: FlashMessageService, public ajaxStateService : AjaxStateService){
   }
 
 }

@@ -1,6 +1,13 @@
 <div class="joke-wrapper">
-    <div class="joke-setup">{{setup}}></div>
-    <div *ngIf="deliveryIsVisible" class="joke-delivery">{{delivery}}</div>
-    <button *ngIf="!deliveryIsVisible" (click)="showDelivery()">?</button>
-    <button *ngIf="deliveryIsVisible" (click)="getNextJoke()">next joke</button>
+  <div class="joke-setup">{{ setup }}></div>
+  <div *ngIf="deliveryIsVisible" class="joke-delivery">{{ delivery }}</div>
+  <br />
+  <button *ngIf="!deliveryIsVisible" (click)="showDelivery()">?</button>
+  <button *ngIf="deliveryIsVisible" (click)="getNextJoke()">next joke</button>
 </div>
+
+<br />
+<a
+  href="https://github.com/Sv443/JokeAPI/issues/new?assignees=Sv443&labels=reported+joke&template=3_report_a_joke.md&title="
+  >report offensive joke</a
+>
