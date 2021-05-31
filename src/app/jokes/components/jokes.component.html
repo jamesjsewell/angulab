@@ -1,2 +1,2 @@
-JOKES!
-<button (click)="addMessage()"></button>
+
+<div *ngIf="joke$ | async as joke"><joke [setup]="joke.setup" [delivery]="joke.delivery" (fetchNextJoke)="fetchNextJoke()"></joke></div>

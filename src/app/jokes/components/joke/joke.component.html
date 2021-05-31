@@ -1,0 +1,6 @@
+<div class="joke-wrapper">
+    <div class="joke-setup">{{setup}}></div>
+    <div *ngIf="deliveryIsVisible" class="joke-delivery">{{delivery}}</div>
+    <button *ngIf="!deliveryIsVisible" (click)="showDelivery()">?</button>
+    <button *ngIf="deliveryIsVisible" (click)="getNextJoke()">next joke</button>
+</div>
