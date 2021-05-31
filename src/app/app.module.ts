@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FlashMessageComponent } from './components/flash-message/flash-message.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FlashMessageComponent
   ],
   imports: [
     BrowserModule,

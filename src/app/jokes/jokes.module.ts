@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { JokesRoutingModule } from './jokes-routing.module';
 import { JokesComponent } from './components/jokes.component'
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [JokesComponent],
   imports: [
     CommonModule,
-    JokesRoutingModule
+    JokesRoutingModule,
+    SharedModule
   ]
 })
 export class JokesModule { }

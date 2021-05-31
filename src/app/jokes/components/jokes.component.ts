@@ -5,6 +5,9 @@ import { of } from 'rxjs'
 
 import { Joke } from '../constants'
 import { debug, RxJsLoggingLevel } from '../../util/rxjs-logging'
+import { FlashMessageService } from 'src/app/services/flash-message.service';
+import { FlashMessageTypes } from 'src/app/constants';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'jokes',
@@ -12,7 +15,7 @@ import { debug, RxJsLoggingLevel } from '../../util/rxjs-logging'
   styleUrls: ['./jokes.component.scss'],
 })
 export class JokesComponent {
-  constructor(private jokeService: JokeService) {
+  constructor(private jokeService: JokeService, private flashMessageService: FlashMessageService) {
     this.getJoke();
   }
 
@@ -30,5 +33,8 @@ export class JokesComponent {
       .subscribe((joke) => {
         console.log(joke);
       });
+  }
+  addMessage(){
+    this.flashMessageService.addMessage({id: uuid(), message: 'test', type: FlashMessageTypes.SUCCESS})
   }
 }
