@@ -16,21 +16,21 @@ import { v4 as uuid } from 'uuid';
 })
 export class JokesComponent {
 
-  joke$: Observable<{category: string, setup: string, delivery: string}>
+  joke$: Observable<{id: string, category: string, setup: string, delivery: string}>
 
   constructor(private jokeService: JokeService, private flashMessageService: FlashMessageService) {
     this.joke$ = this.getJoke()
   }
 
-  private getJoke(): Observable<{category: string, setup: string, delivery: string}> {
+  private getJoke(): Observable<{id: string, category: string, setup: string, delivery: string}> {
     return this.jokeService
     .getJoke()
     .pipe(
       debug(RxJsLoggingLevel.DEBUG, 'get joke result'),
-      filter((joke: any)=>!!joke && !!joke.category && !!joke.setup && !!joke.delivery),
+      filter((joke: any)=>!!joke && !!joke.id && !!joke.category && !!joke.setup && !!joke.delivery),
       switchMap((joke: Joke)=>{
-        const { category, setup, delivery } = joke
-        return of({category, setup, delivery})
+        const { id, category, setup, delivery } = joke
+        return of({id, category, setup, delivery})
       })
     )
   }

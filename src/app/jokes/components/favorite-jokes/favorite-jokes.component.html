@@ -1,0 +1,7 @@
+<div class="favorite-jokes" *ngIf="favorites">
+    <div class="favorite-joke" *ngFor="let fav of favorites">
+        <h4>{{fav.setup}}</h4>
+        <hr>
+        <h4>{{fav.delivery}}</h4>
+    </div>
+</div>

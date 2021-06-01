@@ -1,2 +1,6 @@
+<button routerLink="/jokes/favorites">fav jokes</button>
 
-<div *ngIf="joke$ | async as joke"><joke [setup]="joke.setup" [delivery]="joke.delivery" (fetchNextJoke)="fetchNextJoke()"></joke></div>
+<br>
+<br>
+
+<div *ngIf="joke$ | async as joke"><joke [id]="joke.id" [setup]="joke.setup" [delivery]="joke.delivery" (fetchNextJoke)="fetchNextJoke()"></joke></div>

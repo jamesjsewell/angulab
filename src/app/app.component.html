@@ -1,7 +1,12 @@
 <ajax-spinner *ngIf="ajaxStateService.fetching"></ajax-spinner>
-<router-outlet></router-outlet>
-<button routerLink="/jokes">jokes</button>
+<button routerLink="/jokes/random">jokes</button>
 <button routerLink="/animals">Awww</button>
+
+<br>
+<br>
+<br>
+
+<router-outlet></router-outlet>
 <div *ngFor="let message of flashMessageService.messages$ | async">
     <flash-message [message]="message.message" [type]="message.type"></flash-message>
 </div>

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
- imports: [ CommonModule ],
+ imports: [ CommonModule, FormsModule ],
  declarations: [ ],
  exports: [ CommonModule, FormsModule ]
 })
